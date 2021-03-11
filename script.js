@@ -12,9 +12,9 @@ function generateTarget(){
     return randomNum;
 };
 
-const getAbsoluteDistance = (humanGuess, computerGuess) => {Math.abs(humanGuess - computerGuess)};
+const getAbsoluteDistance = (humanGuess, computerGuess) => {Math.abs(humanGuess - computerGuess)}; // Calculate absolute difference between computer and user
 
-function compareGuesses(humanGuess, computerGuess, targetNumber){
+function compareGuesses(humanGuess, computerGuess, targetNumber){ // Compares guesses to see who wins - computer vs human
 
     if (humanGuess > 9 || humanGuess < 0){
         return "Human guess out of range!";
@@ -29,7 +29,7 @@ function compareGuesses(humanGuess, computerGuess, targetNumber){
     };
 };
 
-function updateScore(winner){
+function updateScore(winner){ // Increments human or computer score by 1 if they win
     if (winner === 'human'){
         humanScore += 1;
     } else if (winner === 'computer'){
@@ -39,7 +39,7 @@ function updateScore(winner){
     }
 };
 
-function updateRound(){
+function updateRound(){ // Increment round number by 1 
     currentRoundNumber += 1;
 };
 
