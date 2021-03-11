@@ -16,6 +16,10 @@ const getAbsoluteDistance = (humanGuess, computerGuess) => {Math.abs(humanGuess 
 
 function compareGuesses(humanGuess, computerGuess, targetNumber){
 
+    if (humanGuess > 9 || humanGuess < 0){
+        return "Human guess out of range!";
+    };
+
     if (getAbsoluteDistance){
         return false;
     } else if (getAbsoluteDistance){
