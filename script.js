@@ -7,20 +7,22 @@ let currentRoundNumber = 1;
 // Generates random number between 0 and 9
 function generateTarget(){
 
-    let randomNum = Math.random() * 9
+    let randomNum = Math.floor(Math.random() * 9);
 
-    return Math.floor(randomNum);
+    return randomNum;
 };
+
+const getAbsoluteDistance = (humanGuess, computerGuess) => {Math.abs(humanGuess - computerGuess)};
 
 function compareGuesses(humanGuess, computerGuess, targetNumber){
 
-    if (humanGuess === computerGuess){
+    if (getAbsoluteDistance){
+        return false;
+    } else if (getAbsoluteDistance){
         return true;
-    } else if (Math.abs((targetNumber - computerGuess)) < Math.abs((targetNumber - humanGuess))){
-        return false;
     } else {
-        return false;
-    }
+        return true;
+    };
 };
 
 function updateScore(winner){
@@ -28,11 +30,14 @@ function updateScore(winner){
         humanScore += 1;
     } else if (winner === 'computer'){
         computerScore += 1;
-    };
+    } else {
+        return "Incorrect winner entry";
+    }
 };
 
 function updateRound(){
-
+    currentRoundNumber += 1;
 };
 
-console.log(generateTarget());
+console.log(updateScore('computer'))
+console.log(computerScore)
